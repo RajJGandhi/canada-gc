@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f6f3">
+  <meta name="description" content="Find your way through Canadian government services. Clear answers, official sources, and a useful next step. An independent project by Build Canada.">
+  <title>Gov · Build Canada</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Gov · Build Canada">
+  <meta property="og:description" content="Clear answers, official Canadian government sources, and a useful next step. An independent project by Build Canada.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gov.buildcanada.com/">
+  <meta property="og:image" content="https://gov.buildcanada.com/images/lake-louise-panorama.jpg">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/checklist.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="independent-banner" id="independent-banner">An independent project by Build Canada. Not a Government of Canada website.</div>
+  <header class="site-header">
+    <a href="/" class="wordmark" id="brand" aria-label="Gov by Build Canada, home"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="m24 2 5 11 5-3-1 10 11-3-4 8 5 3-16 10 1 8h-5l1-8L9 28l5-3-4-8 11 3-1-10 5 3Z"/></svg><span>Gov<span class="wordmark-sub">by Build Canada</span></span></a>
+    <nav aria-label="Main navigation" class="header-actions"><div class="language-switch" aria-label="Language"><button type="button" data-language="en" aria-pressed="true">EN</button><span>/</span><button type="button" data-language="fr" aria-pressed="false">FR</button></div><button class="menu-button" id="menu-button" aria-haspopup="dialog">Menu <span aria-hidden="true">☰</span></button></nav>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="home" id="home">
+      <div class="home-intro"><p class="eyebrow" id="eyebrow">A little clarity. A good next step.</p><h1 id="greeting">Hello, Canada.</h1><p class="tagline" id="tagline">Whatever you need from government, start here.</p></div>
+      <div class="hero">
+        <img class="hero-photo active" id="hero-photo-lake" src="/images/lake-louise-panorama.jpg" width="1280" height="718" alt="Turquoise Lake Louise surrounded by the Canadian Rockies" fetchpriority="high" decoding="async">
+        <img class="hero-photo" id="hero-photo-city" data-src="/images/toronto-skyline.jpg" alt="Toronto skyline across Lake Ontario" decoding="async">
+        <div class="hero-shade"></div>
+        <div id="home-composer-slot" class="home-composer-slot"></div>
+        <div class="hero-caption"><span id="hero-caption">From coast to coast, a clearer path forward.</span><button class="landscape-label" id="landscape-label" type="button">Photo: Chensiyuan · CC BY-SA 4.0</button></div>
+      </div>
+      <div class="hero-controls" aria-label="Example questions"><button type="button" id="hero-previous" aria-label="Previous example">‹</button><button type="button" id="hero-pause" aria-label="Pause examples">Ⅱ</button><button type="button" id="hero-next" aria-label="Next example">›</button><span id="hero-count" class="sr-only">Example 1 of 4</span></div>
+      <div class="suggestions" id="home-suggestions" aria-label="Example questions"></div>
+      <a class="life-event-entry" href="/life-events/start-business-london"><span><span class="life-event-entry-label">NEW · GUIDED CHECKLIST · ENGLISH PROTOTYPE</span><strong>Start a business in London, Ontario</strong><span>One plan. Three levels of government. Your progress saved on this device.</span></span><span aria-hidden="true">↗</span></a>
+      <div class="trust-intro"><h2 id="trust-heading">Government can be complicated.<br>Getting started shouldn’t be.</h2><p id="trust-description">Ask in your own words. Find a clear answer, see the official sources, and know what to do next.</p></div>
+      <div class="trust-grid"><article><span class="trust-icon" aria-hidden="true">↗</span><h3 id="trust-source-title">See where it comes from.</h3><p id="trust-source-text">Answers draw from approved government websites. Every source is a click away.</p></article><article><span class="trust-icon" aria-hidden="true">◌</span><h3 id="trust-simple-title">No account. No ads.</h3><p id="trust-simple-text">A simple place to start, without another login or a sales pitch.</p></article><article><span class="trust-icon" aria-hidden="true">⌖</span><h3 id="trust-local-title">A little closer to home.</h3><p id="trust-local-text">Federal, provincial, and nearby municipal sources, with your location under your control.</p></article></div>
+    </section>
+    <section class="chat" id="chat" hidden aria-label="Conversation"><div class="chat-toolbar"><button class="text-button" id="restart-button">↶ <span>New conversation</span></button><button class="location-button" id="chat-location-button" aria-haspopup="dialog">⌖ <span>Canada</span> <span aria-hidden="true">⌄</span></button></div><div class="conversation" id="conversation" role="log" aria-live="off"></div><div class="chat-bottom-space"></div></section>
+    <div class="chat-composer-dock" id="chat-composer-slot" hidden></div>
+  </main>
+  <footer class="site-footer" id="site-footer"><div class="footer-links"><button data-info="about">About</button><button data-info="how">How it works</button><button data-info="privacy">Privacy</button><a href="https://buildcanada.com" target="_blank" rel="noopener noreferrer">Build Canada ↗</a></div><div class="footer-bottom"><p id="footer-disclaimer">AI can make mistakes. Check official sources before acting.</p><span id="footer-credit">An independent project by Build Canada.</span></div></footer>
+  <div id="composer" class="composer-wrap"><form class="composer" id="composer-form"><textarea id="question" rows="1" maxlength="6000" placeholder="How do I renew my passport?" aria-label="Ask a government services question"></textarea><button type="button" class="composer-icon" id="attach-button" aria-label="Attach a PDF" title="Attach a PDF"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 13V6a4 4 0 0 1 8 0v12a6 6 0 0 1-12 0V7M8 8v10a2 2 0 0 0 4 0V6"/></svg></button><button type="button" class="composer-icon mic-button" id="mic-button" aria-label="Speak your question" title="Speak your question"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M6 10v2a6 6 0 0 0 12 0v-2M12 18v3M8 21h8"/></svg></button><button type="submit" class="send-button" id="send-button" aria-label="Send question"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><button type="button" class="send-button stop-button" id="stop-button" hidden aria-label="Stop response"><span></span></button></form><div class="composer-suggestions" id="composer-suggestions" hidden aria-label="Suggested questions"></div><div class="document-chip" id="document-chip" hidden><span aria-hidden="true">▤</span><button type="button" id="document-preview-button"></button><button type="button" id="document-remove" aria-label="Remove PDF">×</button></div><p class="composer-note" id="composer-note">Official sources. Clear next steps. <button type="button" id="composer-location">⌖ Canada</button><button type="button" id="location-button" aria-label="Choose your location" hidden>Choose your location</button></p></div>
+  <dialog class="source-dialog" id="source-dialog" aria-labelledby="sources-title"><div class="dialog-heading"><h2 id="sources-title">Sources</h2><button class="close-button" data-close aria-label="Close">×</button></div><p class="dialog-subtitle" id="sources-description">Official pages used in this answer.</p><label class="source-search-label" for="source-search"><span class="sr-only" id="source-search-label">Find a source</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg><input type="search" id="source-search" placeholder="Find an agency or page…" autocomplete="off"></label><div id="source-groups"></div><p id="source-search-empty" class="dialog-subtitle" hidden>No matching sources.</p></dialog>
+  <dialog class="info-dialog" id="info-dialog" aria-labelledby="info-title"><div class="dialog-heading"><h2 id="info-title">About</h2><button class="close-button" data-close aria-label="Close">×</button></div><div class="info-content" id="info-content"></div></dialog>
+  <dialog class="location-dialog" id="location-dialog" aria-labelledby="location-title"><div class="dialog-heading"><h2 id="location-title">A little closer to home</h2><button class="close-button" data-close aria-label="Close">×</button></div><p id="location-explanation">We use an approximate location from Cloudflare to find relevant government sources. Your question takes priority. You can choose a different location.</p><form id="location-form"><label for="province" id="province-label">Province or territory</label><select id="province"><option value="">Use approximate location</option></select><label for="municipality" id="municipality-label">Municipality</label><select id="municipality"><option value="">Province-wide sources</option></select><p class="location-help" id="location-help">Federal sources are always included. Nearby municipalities help with local services.</p><button type="submit" class="primary-button" id="location-save">Use this location</button><button type="button" class="text-button location-reset" id="location-reset">Use approximate location</button></form></dialog>
+  <input type="file" id="pdf-input" accept="application/pdf,.pdf" hidden>
+  <dialog class="document-dialog" id="document-dialog" aria-labelledby="document-title"><div class="dialog-heading"><h2 id="document-title">Attach a PDF</h2><button class="close-button" data-close aria-label="Close">×</button></div><div id="document-content"></div></dialog>
+  <section id="print-export" hidden></section>
+  <div class="sr-only" id="announcement" role="status" aria-live="polite"></div>
+</body>
+</html>

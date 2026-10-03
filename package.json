@@ -1,0 +1,28 @@
+{
+  "name": "buildcanada-gov",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "npm run build && wrangler dev",
+    "test": "node --test test/*.test.js",
+    "check": "npm run build && wrangler deploy --dry-run",
+    "deploy": "npm run build && wrangler deploy",
+    "eval": "node scripts/eval.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "wrangler": "^4.134.0"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^6.3.289"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BuildCanada/gov.git"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

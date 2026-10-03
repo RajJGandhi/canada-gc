@@ -1,0 +1,50 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "buildcanada-gov",
+  "main": "src/index.js",
+  "account_id": "af43b5869a980d4edc6c18f15cd7aa2d",
+  "compatibility_date": "2026-09-29",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    {
+      "pattern": "gov.buildcanada.com",
+      "custom_domain": true
+    }
+  ],
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "not_found_handling": "single-page-application"
+  },
+  "ai": {
+    "binding": "AI"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "CACHE",
+      "id": "c3b4cd7b7708444bb38b240fe7dc4ce9"
+    }
+  ],
+  "ratelimits": [
+    {
+      "name": "RATE_LIMITER",
+      "namespace_id": "1009",
+      "simple": {
+        "limit": 12,
+        "period": 60
+      }
+    }
+  ],
+  "vars": {
+    "MODEL_PROVIDER": "openrouter",
+    "MODEL": "google/gemini-3.8-flash",
+    "ANSWER_TTL_SECONDS": "7200",
+    "SEARCH_TTL_SECONDS": "7200",
+    "FOLLOWUP_TTL_SECONDS": "2592000"
+  },
+  "observability": {
+    "enabled": false
+  }
+}
